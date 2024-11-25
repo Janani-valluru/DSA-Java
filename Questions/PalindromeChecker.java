@@ -1,33 +1,39 @@
-
-
 import java.util.Scanner;
 
-public class PalindromeChecker 
-{
-	public static boolean IsPalindrome(String str, int start, int end) 
-	{
-		if(start>=end)  //termination condition
-			return true;
-		
-		if(str.charAt(start) != str.charAt(end))
-			return false;
-		
-		return IsPalindrome(str,start+1, end-1);  // recursive call
-		
-	}
+public class PalindromeChecker {
 
-	public static void main(String[] args) 
-	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter your string: ");
-		String input = sc.next().toLowerCase();
-		
-		if(IsPalindrome(input, 0, input.length()-1))
-		{
-			System.out.println("the string \"" + input + "\"is a palindrome");
-		}
-		else System.out.println("the string \"" + input + "\"is not a palindrome");	
-		
-		sc.close();
-	}
+    public static boolean isPalindrome(String str, int left, int right) {
+        // Base case: If left index is greater than or equal to the right, it's a palindrome
+        if (left >= right) {
+            return true;
+        }
+
+        // Check if characters at the current positions are the same
+        if (str.charAt(left) != str.charAt(right)) {
+            return false;
+        }
+
+        // Recursive case: Check the next inner pair of characters
+        return isPalindrome(str, left + 1, right - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input string
+        System.out.println("Enter a string to check if it's a palindrome:");
+        String input = sc.nextLine();
+
+        // Check if the input string is a palindrome
+        boolean result = isPalindrome(input, 0, input.length() - 1);
+
+        // Output the result
+        if (result) {
+            System.out.println("The string is a palindrome.");
+        } else {
+            System.out.println("The string is not a palindrome.");
+        }
+
+        sc.close();
+    }
 }
