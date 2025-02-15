@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Janani-valluru/DSA-Java/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0217-contains-duplicate](https://github.com/Janani-valluru/DSA-Java/tree/master/0217-contains-duplicate) |
+| [0485-max-consecutive-ones](https://github.com/Janani-valluru/DSA-Java/tree/master/0485-max-consecutive-ones) |
 | [2350-find-closest-number-to-zero](https://github.com/Janani-valluru/DSA-Java/tree/master/2350-find-closest-number-to-zero) |
 ## Two Pointers
 |  |
